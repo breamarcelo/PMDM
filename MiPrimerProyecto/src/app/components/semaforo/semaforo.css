@@ -31,5 +31,30 @@ div.verde {
 
 p.numero {
     font-size: 100px;
-    ;
+}
+
+div.contenedor {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    flex-direction: row;
+}
+
+div.contenedor>div {
+    width: 150px;
+}
+
+div.botones {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: 5px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: lightblue;
+    font-weight: blod;
+    font-size: 25px;
 }

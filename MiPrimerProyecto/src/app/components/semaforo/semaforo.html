@@ -6,8 +6,12 @@
 </div>
 
 <div class="contenedor">
-    <p class="numero">{{ numero }}</p>
-    <button id="btn_incrementar" (click)="incrementar()">Incrementar</button>
-    <button id="btn_decrementar" (click)="decrementar()">Decrementar</button>
-    <button id="btn_reset" (click)="reset()">Reset</button>
+    <div>
+        <p class="numero">{{ numero }}</p>
+    </div>
+    <div class="botones">
+        <button id="btn_incrementar" (click)="incrementar()">+</button>
+        <button id="btn_decrementar" (click)="decrementar()">-</button>
+        <button id="btn_reset" (click)="reset()">RESET</button>
+    </div>
 </div>
