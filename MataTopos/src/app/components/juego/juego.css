@@ -1,0 +1,77 @@
+div.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+div.tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    height: auto;
+}
+
+div.casilla {
+    border: 5px solid orange;
+    background-color: lightgray;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+div.topo {
+    width: 50px;
+    height: 75px;
+    background-color: brown;
+    border-radius: 45% 45% 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.ojos {
+    display: flex;
+    flex-direction: row;
+    width: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -5px;
+}
+
+div.ojos>div {
+    width: 12px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+div.nariz {
+    width: 10px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+div.boca {
+    margin-top: -15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+div.boca>div {
+    width: 20px;
+    height: 20px;
+    margin: -3px;
+    border-radius: 50%;
+    background-color: chocolate;
+}

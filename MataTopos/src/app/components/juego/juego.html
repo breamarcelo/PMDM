@@ -1,0 +1,24 @@
+<div class="contenedor">
+    <p>Puntuación: {{puntuacion}}</p>
+    <div class="tablero">
+        @for(casilla of casillas; track casillas){
+        @if(casilla == 0) {
+        <div class="casilla" (click)="actualizarPuntuacion(casilla)"></div>
+        } @else if (casilla == 1) {
+        <div class="casilla" (click)="actualizarPuntuacion(casilla)">
+            <div class="topo">
+                <div class="ojos">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="nariz"></div>
+                <div class="boca">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        }
+        }
+    </div>
+</div>
