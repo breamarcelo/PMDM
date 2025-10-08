@@ -1,5 +1,7 @@
 <div class="contenedor">
     <p>Puntuación: {{puntuacion}}</p>
+    <button (click)="generarTablero()">Click Me!</button>
+    <p>{{casillas}}</p>
     <div class="tablero">
         @for(casilla of casillas; track casillas){
         @if(casilla == 0) {
