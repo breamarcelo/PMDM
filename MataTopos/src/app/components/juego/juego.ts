@@ -12,20 +12,26 @@ export class Juego {
 
   generarTablero() {
     let num: number = this.casillas.indexOf(1);
-    while ()
-      num = Math.floor(Math.random() * 8);
-    for (let i = 0; i < 9; i++) {
+    let rand: number = Math.floor(Math.random() * 8);
+    while (num == rand) {
+      rand = Math.floor(Math.random() * 8);
+      console.log(`Same numbers: ${num} - ${rand}`)
+    }
+    num = rand;
+    for (let i = 0; i < 8; i++) {
       if (i != num) {
         this.casillas[i] = 0;
       } else if (i == num) {
         this.casillas[i] = 1;
       }
     }
+    console.log(`Not the same: ${num} - ${rand}`)
   }
 
   actualizarPuntuacion(casilla: number) {
     if (casilla == 1) {
       this.puntuacion++;
+      this.generarTablero();
     } else {
       this.puntuacion--;
     }
