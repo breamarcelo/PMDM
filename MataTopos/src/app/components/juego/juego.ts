@@ -31,7 +31,11 @@ export class Juego {
       this.puntuacion++;
       this.generarTablero();
     } else {
-      this.puntuacion--;
+      if (this.puntuacion > 0) {
+        this.puntuacion--;
+      } else {
+        this.puntuacion = 0;
+      }
     }
   }
 }
