@@ -15,7 +15,6 @@ export class Juego {
     let rand: number = Math.floor(Math.random() * 8);
     while (num == rand) {
       rand = Math.floor(Math.random() * 8);
-      console.log(`Same numbers: ${num} - ${rand}`)
     }
     num = rand;
     for (let i = 0; i < 8; i++) {
@@ -25,7 +24,6 @@ export class Juego {
         this.casillas[i] = 1;
       }
     }
-    console.log(`Not the same: ${num} - ${rand}`)
   }
 
   actualizarPuntuacion(casilla: number) {

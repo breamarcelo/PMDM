@@ -1,5 +1,9 @@
+<h1 class="titulo">Mata Topos</h1>
 <div class="contenedor">
-    <p>Puntuación: {{puntuacion}}</p>
+    <div class="puntuacion">
+        <p>Score:</p>
+        <p>{{puntuacion}}</p>
+    </div>
     <div class="tablero">
         @for(casilla of casillas; track casillas){
         @if(casilla == 0) {
