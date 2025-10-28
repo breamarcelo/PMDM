@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <button matIconButton [matMenuTriggerFor]="miMenu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Mi Aplicación</span>
+    <span class="example-spacer"></span>
+    <span routerLink="/semaforo" class="ruta">Semaforo</span>
+    <span class="example-spacer"></span>
+    <span routerLink="/formulario" class="ruta">Formulario</span>
+    <span class="example-spacer"></span>
+</mat-toolbar>
+
+<mat-menu #miMenu="matMenu">
+    <button mat-menu-item routerLink="/semaforo">Semaforo</button>
+    <button mat-menu-item routerLink="/formulario">Formulario</button>
+</mat-menu>

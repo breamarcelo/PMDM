@@ -1,0 +1,11 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.ruta {
+    cursor: pointer;
+}
+
+.ruta:hover {
+    font-weight: 600;
+}

@@ -1,8 +1,12 @@
 <form [formGroup]='formulario' (ngSubmit)="enviar()">
     <div class="contenedor-campo">
+        <input type="text" name="nombre">
 
-        <label for="nombre">Nombre:</label>
-        <input formControlName="nombre" type="text" name="nombre" id="nombre">
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput id="nombre" formControlName="nombre">
+        </mat-form-field>
+
         <div class="mensaje-error">
             @if(formulario.controls['nombre'].hasError('required')){
             <p>El campo nombre es obligatorio</p>
@@ -18,8 +22,11 @@
 
     <div class="contenedor-campo">
 
-        <label for="email">Email:</label>
-        <input formControlName="email" type="text" name="email" id="email">
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" id="email">
+        </mat-form-field>
+
         <div class="mensaje-error">
             @if(formulario.controls['email'].hasError('required')){
             <p>El campo email es obligatorio</p>
@@ -30,6 +37,6 @@
         </div>
     </div>
 
-    <button type="submit">Enviar</button>
-    <button (click)="reset()">Reset</button>
+    <button type="submit" matButton="elevated">Enviar</button>
+    <button matButton="filled" (click)="reset()">Reset</button>
 </form>
