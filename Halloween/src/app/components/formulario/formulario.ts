@@ -5,10 +5,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 @Component({
   selector: 'app-formulario',
-  imports: [ReactiveFormsModule, MatInputModule, MatSelectModule, MatCheckboxModule, MatButtonModule, MatIconModule],
+  imports: [ReactiveFormsModule, MatInputModule, MatSelectModule, MatCheckboxModule, MatButtonModule, MatIconModule, MatToolbarModule, MatStepperModule],
   templateUrl: './formulario.html',
   styleUrl: './formulario.css',
 
