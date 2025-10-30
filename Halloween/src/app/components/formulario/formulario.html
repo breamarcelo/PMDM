@@ -1,45 +1,69 @@
 <mat-toolbar class="toolbar">
-    <span>Inscripción Halloween</span>
+    <span>🎃 Inscripción Halloween</span>
 </mat-toolbar>
-
-<mat-vertical-stepper>
-    <mat-step>
-        <form [formGroup]='formulario' (ngSubmit)='enviar()'>
-            <mat-form-field appearance="outline">
-                <ng-template matStepLabel>Rellena tu nombre</ng-template>
-                <mat-label>Nombre</mat-label>
-                <input type="text" matInput formControlName="nombre" id="nombre">
-            </mat-form-field>
-        </form>
-    </mat-step>
-</mat-vertical-stepper>
-
-<!--
-    <mat-form-field appearance="outline">
-        <mat-label>Email</mat-label>
-        <input type="email" matInput formControlName="email" id="email">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label>Tipo de invitado</mat-label>
-        <mat-select [(value)]="tipoInvitado">
-            <mat-option value="humano">Humano</mat-option>
-            <mat-option value="fantasma">Fantasma</mat-option>
-            <mat-option value="vampiro">Vampiro</mat-option>
-            <mat-option value="bruja">Bruja</mat-option>
-        </mat-select>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Disfraz</mat-label>
-        <input type="text" matInput formControlName="disfraz" id="disfraz">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Fecha de llegada</mat-label>
-        <input type="date" matInput formControlName="fechaLlegada" id="fechaLlegada">
-    </mat-form-field>
-    <mat-checkbox id="aceptarReglas">Prometo no morder a los demás invitados</mat-checkbox>
-    <button matFab extended>
-        <mat-icon>catching_pokemon</mat-icon>
-        ENVIAR
-    </button>
+<form [formGroup]='formulario' (ngSubmit)='enviar()' class="formulario">
+    <div class="contenedor">
+        <div class="mensaje-error">
+            @if(formulario.controls['nombre'].hasError('required')){
+            <mat-error>👻 Este campo da más miedo vacío, ¡rellénalo!</mat-error>
+            }
+            @if(formulario.controls['nombre'].hasError('minlength')){
+            <mat-error>🪦 Este nombre es demasiado corto para una lápida.</mat-error>
+            }
+        </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input type="text" matInput formControlName="nombre" id="nombre">
+        </mat-form-field>
+        <div class="mensaje-error">
+            @if(formulario.controls['email'].hasError('required')){
+            <mat-error>💀 Este campo da más miedo vacío, ¡rellénalo!</mat-error>
+            }
+            @if(formulario.controls['email'].hasError('email')){
+            <mat-error>🩸 Ese correo parece maldito… revisa el formato.</mat-error>
+            }
+        </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" id="email">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Tipo de invitado</mat-label>
+            <mat-select [(value)]="tipoInvitado">
+                <mat-option value="humano">Humano</mat-option>
+                <mat-option value="fantasma">Fantasma</mat-option>
+                <mat-option value="vampiro">Vampiro</mat-option>
+                <mat-option value="bruja">Bruja</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="mensaje-error">
+            @if(formulario.controls['disfraz'].hasError('required')){
+            <mat-error>🧟‍♂️ Este campo da más miedo vacío, ¡rellénalo!</mat-error>
+            }
+        </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Disfraz</mat-label>
+            <input type="text" matInput formControlName="disfraz" id="disfraz">
+        </mat-form-field>
+        <div class="mensaje-error">
+            @if(formulario.controls['fechaLlegada'].hasError('required')){
+            <mat-error>⚰️ Este campo da más miedo vacío, ¡rellénalo!</mat-error>
+            }
+        </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Fecha de llegada</mat-label>
+            <input type="date" matInput formControlName="fechaLlegada" id="fechaLlegada">
+        </mat-form-field>
+        <div class="mensaje-error">
+            @if(formulario.controls['aceptarReglas'].hasError('required')){
+            <mat-error>🧛‍♂️ Debes aceptar esta condición.</mat-error>
+            }
+        </div>
+        <mat-checkbox id="aceptarReglas" formControlName="aceptarReglas">Prometo no morder a los demás
+            invitados</mat-checkbox>
+        <button matFab extended>
+            <mat-icon>send</mat-icon>
+            ENVIAR
+        </button>
+    </div>
 </form>
--->

@@ -1,3 +1,15 @@
 .toolbar {
     background-color: rgb(118, 21, 125);
 }
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+}
+
+input.ng-invalid,
+mat-error {
+    margin: 5px;
+    color: #b30000;
+}
