@@ -1,0 +1,32 @@
+<form [formGroup]='formulario' (ngSubmit)='enviar()'>
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input type="text" matInput formControlName="nombre" id="nombre">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email" id="email">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Tipo de invitado</mat-label>
+        <mat-select [(value)]="tipoInvitado">
+            <mat-option value="humano">Humano</mat-option>
+            <mat-option value="fantasma">Fantasma</mat-option>
+            <mat-option value="vampiro">Vampiro</mat-option>
+            <mat-option value="bruja">Bruja</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Disfraz</mat-label>
+        <input type="text" matInput formControlName="disfraz" id="disfraz">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Fecha de llegada</mat-label>
+        <input type="date" matInput formControlName="fechaLlegada" id="fechaLlegada">
+    </mat-form-field>
+    <mat-checkbox id="aceptarReglas">Prometo no morder a los demás invitados</mat-checkbox>
+    <button matFab extended>
+        <mat-icon>catching_pokemon</mat-icon>
+        ENVIAR
+    </button>
+</form>
