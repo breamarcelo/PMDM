@@ -1,0 +1,33 @@
+<!--
+    <div class="tarjeta">
+        <img [src]="personajeEnviado.imagen" class="imagen">
+        <h3>{{personajeEnviado.nombre}}</h3>
+        <p><strong>Nivel:</strong>{{personajeEnviado.nivel}}</p>
+        <p><strong>Clase:</strong>{{personajeEnviado.clase}}</p>
+    </div>
+    
+    <p>
+        <b>desde el hijo mostramos:</b>
+        {{personajeEnviado.nombre}} - {{personajeEnviado.clase}} - {{personajeEnviado.nivel}} - {{personajeEnviado.imagen}}
+    </p>
+    
+-->
+
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+        <img mat-card-avatar class="example-header-image" [src]="personajeEnviado.imagen">
+        <mat-card-title>{{personajeEnviado.nombre}}</mat-card-title>
+        <mat-card-subtitle>{{personajeEnviado.clase}} - {{personajeEnviado.nivel}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="personajeEnviado.imagen">
+    <mat-card-content>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae mauris bibendum, blandit purus a,
+            imperdiet quam. Nullam iaculis ut nisl nec vulputate. Phasellus sit amet magna nec dui venenatis
+            scelerisque. Aenean sit amet congue lectus.
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button matButton="filled">SELECCIONAR</button>
+    </mat-card-actions>
+</mat-card>

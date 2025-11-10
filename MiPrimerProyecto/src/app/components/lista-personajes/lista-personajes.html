@@ -1,0 +1,9 @@
+<div class="lista">
+    <h2>Personajes</h2>
+    <div class="contenedor-tarjetas">
+        @for(personaje of personajes; track personaje){
+        <app-tarjeta-personaje [personajeEnviado]="personaje"></app-tarjeta-personaje>
+
+        }
+    </div>
+</div>

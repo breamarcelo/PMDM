@@ -1,0 +1,22 @@
+/* .tarjeta {
+    border: 2px solid black;
+    border-radius: 12px;
+    margin: 20px;
+    padding: 12px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: antiquewhite;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.imagen {
+    width: 200px;
+} */
+
+.example-card {
+    width: 400px;
+    margin: 10px;
+}
