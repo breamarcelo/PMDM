@@ -1,4 +1,5 @@
-<mat-toolbar>
+<!--<mat-toolbar [ngStyle]="cambiarFondo()">-->
+<mat-toolbar [ngClass]="cambiarClase()">
     <button matIconButton [matMenuTriggerFor]="miMenu">
         <mat-icon>menu</mat-icon>
     </button>
@@ -10,10 +11,12 @@
     <span class="example-spacer"></span>
     <span routerLink="/lista-personajes" class="ruta">Lista de personajes</span>
     <span class="example-spacer"></span>
+    <mat-slide-toggle [(ngModel)]="isChecked">Slide Toggle Checked: {{isChecked}}</mat-slide-toggle>
 </mat-toolbar>
 
 <mat-menu #miMenu="matMenu">
     <button mat-menu-item routerLink="/semaforo">Semaforo</button>
     <button mat-menu-item routerLink="/formulario">Formulario</button>
     <button mat-menu-item routerLink="/lista-personajes">Lista de personajes</button>
+
 </mat-menu>

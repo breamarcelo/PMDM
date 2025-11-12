@@ -9,3 +9,11 @@
 .ruta:hover {
     font-weight: 600;
 }
+
+.fondo-rtransparente {
+    background-color: transparent;
+}
+
+.fondo-azul {
+    background-color: lightblue;
+}
