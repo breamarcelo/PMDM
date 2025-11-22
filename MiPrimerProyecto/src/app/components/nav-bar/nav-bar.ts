@@ -7,6 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ThemeService } from '../../services/theme-service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,29 +15,16 @@ import { CommonModule } from '@angular/common';
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.css'
 })
-export class NavBar implements OnInit, OnDestroy {
-  isChecked = true;
-  intervalo !: any;
+export class NavBar implements OnInit {
+  constructor(private themeService: ThemeService) { }
 
-  cambiarFondo() {
-    return this.isChecked ? { 'background-color': 'lightblue' } : { 'background-color': 'transparent' };
-  }
-
-  cambiarClase() {
-    return this.isChecked ? "fondo-azul" : "fondo-transparente";
-  }
-
-  ngOnDestroy(): void {
-    clearInterval(this.intervalo);
-  }
 
   ngOnInit(): void {
-    this.cambiarIsChecked();
-
-    console.log("entramos en ngOnInit");
+    this.getEstado();
   }
 
-  cambiarIsChecked() {
-    this.intervalo = setInterval(() => { this.isChecked = !this.isChecked; console.log(this.isChecked) }, 1000);
-  };
+  getEstado() {
+    this.themeService.setEstado;
+  }
+
 }
