@@ -1,50 +1,52 @@
-<p>semaforo works!</p>
-<div class="semaforo">
-    @if(numero >= 2) {
-    <div class="rojo"></div>
-    } @else {
-    <div class="gris"></div>
-    }
-    @if(numero == 1) {
-    <div class="amarillo"></div>
-    } @else {
-    <div class="gris"></div>
-    }
-    @if(numero == 0) {
-    <div class="verde"></div>
-    } @else {
-    <div class="gris"></div>
-    }
-</div>
-
-<ul>
-    @for(fruta of frutas;track fruta){
-    <li>{{fruta}}</li>
-    }
-</ul>
-
-<div class="contenedor">
-    <div>
-        <p class="numero">{{ numero }}</p>
+<div [ngClass]="getClase()">
+    <p>semaforo works!</p>
+    <div class="semaforo">
+        @if(numero >= 2) {
+        <div class="rojo"></div>
+        } @else {
+        <div class="gris"></div>
+        }
+        @if(numero == 1) {
+        <div class="amarillo"></div>
+        } @else {
+        <div class="gris"></div>
+        }
+        @if(numero == 0) {
+        <div class="verde"></div>
+        } @else {
+        <div class="gris"></div>
+        }
     </div>
-    <div class="botones">
-        @if(numero < 10){ <button id="btn_incrementar" (click)="incrementar()">+</button>
-            }
-            @if(numero > 0){
-            <button id="btn_decrementar" (click)="decrementar()">-</button>
-            }
-            @if(numero != 0 && numero != 10) {
-            <button id="btn_reset" (click)="reset()">RESET</button>
-            }
-    </div>
-</div>
 
-<div class="tablero">
-    @for (cuadrado of cuadrados; track cuadrado) {
-    @if(cuadrado == 1){
-    <div class="cuadrado_lleno"></div>
-    } @else {
-    <div class="cuadrado_vacio"></div>
-    }
-    }
+    <ul>
+        @for(fruta of frutas;track fruta){
+        <li>{{fruta}}</li>
+        }
+    </ul>
+
+    <div class="contenedor">
+        <div>
+            <p class="numero">{{ numero }}</p>
+        </div>
+        <div class="botones">
+            @if(numero < 10){ <button id="btn_incrementar" (click)="incrementar()">+</button>
+                }
+                @if(numero > 0){
+                <button id="btn_decrementar" (click)="decrementar()">-</button>
+                }
+                @if(numero != 0 && numero != 10) {
+                <button id="btn_reset" (click)="reset()">RESET</button>
+                }
+        </div>
+    </div>
+
+    <div class="tablero">
+        @for (cuadrado of cuadrados; track cuadrado) {
+        @if(cuadrado == 1){
+        <div class="cuadrado_lleno"></div>
+        } @else {
+        <div class="cuadrado_vacio"></div>
+        }
+        }
+    </div>
 </div>

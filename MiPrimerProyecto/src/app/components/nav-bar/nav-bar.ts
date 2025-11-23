@@ -16,15 +16,22 @@ import { ThemeService } from '../../services/theme-service';
   styleUrl: './nav-bar.css'
 })
 export class NavBar implements OnInit {
+  isChecked: boolean = true;
   constructor(private themeService: ThemeService) { }
 
-
   ngOnInit(): void {
-    this.getEstado();
+    this.isChecked = this.themeService.getEstado();
   }
 
-  getEstado() {
-    this.themeService.setEstado;
+  getClase(): string {
+    return this.themeService.getClase();
   }
 
+  cambiar() {
+    this.themeService.setEstado();
+  }
+
+  getEstatus() {
+    this.isChecked = this.themeService.getEstado();
+  }
 }

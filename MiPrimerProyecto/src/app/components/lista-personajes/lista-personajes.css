@@ -3,3 +3,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}

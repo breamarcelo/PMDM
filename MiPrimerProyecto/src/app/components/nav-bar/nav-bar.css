@@ -10,10 +10,18 @@
     font-weight: 600;
 }
 
-.fondo-rtransparente {
-    background-color: transparent;
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.fondo-azul {
-    background-color: lightblue;
+.dark-mode {
+    background-color: darkslategray;
+    color: white;
+}
+
+.light-mode {
+    background-color: lightgray;
+    color: black;
 }

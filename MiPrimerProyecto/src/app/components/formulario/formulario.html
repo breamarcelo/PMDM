@@ -1,42 +1,40 @@
-<form [formGroup]='formulario' (ngSubmit)="enviar()">
-    <div class="contenedor-campo">
-        <input type="text" name="nombre">
-
-        <mat-form-field>
-            <mat-label>Nombre</mat-label>
-            <input matInput id="nombre" formControlName="nombre">
-        </mat-form-field>
-
-        <div class="mensaje-error">
-            @if(formulario.controls['nombre'].hasError('required')){
-            <p>El campo nombre es obligatorio</p>
-            }
-            @if(formulario.controls['nombre'].hasError('minlength')){
-            <p>El nombre debe contener al menos 3 letras</p>
-            }
-            @if(formulario.controls['nombre'].hasError('maxlength')){
-            <p>El nombre debe contener máximo 20 letras</p>
-            }
+<div [ngClass]="getClase()">
+    <form [formGroup]='formulario' (ngSubmit)="enviar()">
+        <div class="contenedor-campo">
+            <input type="text" name="nombre">
+            <div class="mensaje-error">
+                @if(formulario.controls['nombre'].hasError('required')){
+                <p>El campo nombre es obligatorio</p>
+                }
+                @if(formulario.controls['nombre'].hasError('minlength')){
+                <p>El nombre debe contener al menos 3 letras</p>
+                }
+                @if(formulario.controls['nombre'].hasError('maxlength')){
+                <p>El nombre debe contener máximo 20 letras</p>
+                }
+            </div>
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input matInput id="nombre" formControlName="nombre">
+            </mat-form-field>
         </div>
-    </div>
 
-    <div class="contenedor-campo">
-
-        <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input matInput formControlName="email" id="email">
-        </mat-form-field>
-
-        <div class="mensaje-error">
-            @if(formulario.controls['email'].hasError('required')){
-            <p>El campo email es obligatorio</p>
-            }
-            @if(formulario.controls['email'].hasError('email')){
-            <p>Formato de email no válido</p>
-            }
+        <div class="contenedor-campo">
+            <div class="mensaje-error">
+                @if(formulario.controls['email'].hasError('required')){
+                <p>El campo email es obligatorio</p>
+                }
+                @if(formulario.controls['email'].hasError('email')){
+                <p>Formato de email no válido</p>
+                }
+            </div>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" id="email">
+            </mat-form-field>
         </div>
-    </div>
 
-    <button type="submit" matButton="elevated">Enviar</button>
-    <button matButton="filled" (click)="reset()">Reset</button>
-</form>
+        <button type="submit" matButton="elevated">Enviar</button>
+        <button matButton="filled" (click)="reset()">Reset</button>
+    </form>
+</div>
