@@ -11,8 +11,8 @@
     <span class="example-spacer"></span>
     <span routerLink="/lista-personajes" class="ruta">Lista de personajes</span>
     <span class="example-spacer"></span>
-    <mat-slide-toggle [checked]="getEstatus()" (change)="cambiar()">Slide Toggle Checked:
-        {{isChecked}}</mat-slide-toggle>
+    <mat-slide-toggle [checked]="getEstatus()" (change)="cambiar()"></mat-slide-toggle>
+    <span>{{getClase()}}</span>
 </mat-toolbar>
 
 <mat-menu #miMenu="matMenu">
