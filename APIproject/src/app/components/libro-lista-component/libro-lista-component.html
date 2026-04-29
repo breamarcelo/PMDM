@@ -1,1 +1,9 @@
-<p>libro-lista-component works!</p>
+<p>Lista de todos los libros</p>
+
+@for(libro of libros; track libro.id) {
+<span>TÍTULO: {{ libro.titulo }}</span><br>
+<span>AUTOR: {{ libro.autor }}</span><br>
+<span>ISBN: {{ libro.isbn }}</span><br>
+<span>AÑO: {{ libro.anioPublicacion }}</span><br>
+<span>-----------------------------------</span><br>
+}
