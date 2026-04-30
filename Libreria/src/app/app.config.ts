@@ -3,15 +3,13 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { authInterceptorInterceptor } from './interceptors/auth-interceptor-interceptor';
-// import { authInterceptor } from './interceptors/auth.interceptors';
+import { authInterceptor } from './interceptors/auth-interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes),
-    // provideHttpClient()
-    provideHttpClient(withInterceptors([authInterceptorInterceptor]))
+    provideHttpClient(withInterceptors([authInterceptor]))
   ]
 };

@@ -16,9 +16,10 @@ export class LibroListaComponent implements OnInit {
     this.libroService.getLibros().subscribe({
       next: (data) => {
         this.libros = data;
+        console.log(data);
         console.log('Libros cargados con éxito');
-      },
-      error: (err) => console.error('Error al conectar con Spring Boot', err)
+      }//,
+      // error: (err) => console.error('Error al conectar con Spring Boot', err)
     });
   }
 

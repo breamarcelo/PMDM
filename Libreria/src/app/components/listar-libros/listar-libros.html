@@ -1,0 +1,21 @@
+<p>Lista de todos los libros</p>
+
+<div class="card-div">
+
+    @for(libro of libros; track libro.titulo) {
+    <mat-card class="card" appearance="outlined">
+        <mat-card-header>
+            <mat-card-title>
+                {{ libro.titulo }}
+            </mat-card-title>
+            <mat-card-subtitle>
+                {{ libro.autor }}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <span>{{ libro.isbn }}</span> <br>
+            <span>Año de publicación: {{ libro.anioPublicacion }}</span>
+        </mat-card-content>
+    </mat-card>
+    }
+</div>
