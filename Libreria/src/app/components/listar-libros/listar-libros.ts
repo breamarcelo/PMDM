@@ -11,7 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class ListarLibros {
   libros: Libro[] = [];
-
+  // need implementation
   constructor(private libroService: LibroService) { }
   ngOnInit(): void {
     this.libroService.getLibros().subscribe({
